@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxq7b8mn0e4sn"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0co5p"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0co5p")
+metadata/_edit_lock_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -17.5
+offset_right = 100.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Type text to save here!"
+scroll_fit_content_height = true
+metadata/_edit_lock_ = true
+
+[node name="SaveLoad" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Save / Load"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="SaveLoad" to="." method="_on_save_load_pressed"]
